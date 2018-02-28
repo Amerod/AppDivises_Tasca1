@@ -7,46 +7,54 @@
     tools:context="com.amerod.appdivises.MainActivity">
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="150"
+        android:id="@+id/txtCantidadOrigen"
+        android:layout_width="150sp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="0"
+        android:imeOptions="actionDone"
         android:inputType="numberDecimal"
-        android:text="0.0"
-        app:layout_constraintEnd_toStartOf="@+id/editText2"
+        android:selectAllOnFocus="false"
+        android:singleLine="true"
+        app:layout_constraintEnd_toStartOf="@+id/txtCantidadFinal"
         app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btnInvertir" />
 
     <EditText
-        android:id="@+id/editText2"
-        android:layout_width="150"
+        android:id="@+id/txtCantidadFinal"
+        android:layout_width="150sp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"
         android:layout_marginTop="20dp"
+        android:editable="true"
         android:ems="10"
+        android:enabled="false"
+        android:hint="0"
+        android:imeOptions="actionDone"
         android:inputType="numberDecimal"
-        android:text="0.0"
+        android:singleLine="true"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btnInvertir" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/lblOrigen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="111dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         android:text="Euros"
-        app:layout_constraintEnd_toStartOf="@+id/textView6"
+        app:layout_constraintEnd_toStartOf="@+id/lblComision"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCantidadOrigen" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/lblFinal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="112dp"
@@ -54,11 +62,11 @@
         android:layout_marginTop="12dp"
         android:text="Dolares"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintStart_toEndOf="@+id/lblComision"
+        app:layout_constraintTop_toBottomOf="@+id/txtCantidadFinal" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/lblCambio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="133dp"
@@ -67,10 +75,10 @@
         android:text="1 EURO = 1 DOLAR"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTipoCambio" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/lblTipoCambio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="143dp"
@@ -82,24 +90,26 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/txtTipoCambio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
+        android:hint="1.0"
+        android:imeOptions="actionDone"
         android:inputType="numberDecimal"
+        android:selectAllOnFocus="false"
         android:singleLine="true"
-        android:text="1.000"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/lblTipoCambio" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/lblComision"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="163dp"
@@ -108,36 +118,36 @@
         android:text="Comisión"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btnInvertir" />
 
     <EditText
-        android:id="@+id/editText5"
-        android:layout_width="75"
+        android:id="@+id/txtComision"
+        android:layout_width="75sp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="128dp"
         android:layout_marginEnd="154dp"
         android:layout_marginStart="155dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="0.0"
+        android:imeOptions="actionDone"
         android:inputType="numberDecimal"
         android:singleLine="true"
-        android:text="0.10"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/lblComision" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnInvertir"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="36dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:text="invertir"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/lblCambio" />
 </android.support.constraint.ConstraintLayout>
